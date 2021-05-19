@@ -62,8 +62,8 @@ class Person{
     }
 
 
-let p1 = new Person('Naomi', 25)
-let p2 = new Person('Benjamin', 23)
+let person1 = new Person('Naomi', 25)
+let person2 = new Person('Benjamin', 23)
 console.log(p1.printInfo())
 console.log(p2.printInfo())
 console.log(p1.newAge())
