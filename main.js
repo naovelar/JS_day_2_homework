@@ -1,4 +1,4 @@
-//==========Exercise #1 ===========//
+// ==========Exercise #1 =========== //
 /*
 Write a function that parses through the below object and displays all of their
 favorite food dishes as shown:
@@ -29,7 +29,7 @@ for( let i=0; i<Object.keys(person3).length; i++){
     }
 }
 
-//=======Exercise #2=========//
+// =======Exercise #2========= //
 /*
 Write an object prototype for a Person that has a name and age, has a
 printInfo method, and also has a method that 
@@ -73,7 +73,7 @@ console.log(p1.printInfo())
 console.log(p2.printInfo())
 console.log(p2.newAge())
 
-// =============Exercise #3 ============//
+// =============Exercise #3 ============ //
 /*
 
     Create a Promised based function that will check a string to determine if it's length is greater than 10.
@@ -100,7 +100,7 @@ isGreaterThan('onamonapia')
 isLong('onamonapia')
 
     
-===========================================================================================
+// =========================================================================================== //
     
 // CODEWARS PROBLEM #1
 // Reverse Words: Complete the solution so that it reverses all of the words within the string passed in.
@@ -113,6 +113,8 @@ function reverseWords(str){
   return str.split(' ').reverse().join(' ');
 }
     
+// =========================================================================================== //
+
 // CODEWARS PROBLEM #2
 // Are arrow functions odd?
 /*
