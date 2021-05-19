@@ -52,19 +52,6 @@ class Person{
         this.name = name;
         this.age = age;
     }
-    printInfo() {
-        return `Name: ${this.name} \n Age: ${this.age}`
-}
-
-let Ben = new Person('Ben', 1, 'Age', true);
-
-===========================================================================================
-
-class Person{
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-    }
     printInfo =() => {
         return `Name: ${this.name} \n Age: ${this.age}`
     }
@@ -94,25 +81,6 @@ console.log(p2.newAge())
     If the length of the string is less than 10 console log "Small Number"
 */
 
-const isGreaterThan = (num) => {
-    return new Promise( (resolve,reject) => {
-        if(num >= 10 == 0){
-            resolve("Big word")
-        } else {
-            reject("Small Number"
-        }
-    })
-}
-
-// Using a JS Promise
-isEvenNumber(10)
-
-//Happy resolver path
-.then( (result) => {
-    console.log(`Even Number ${result}`)
-})
-    
-===========================================================================================
 const isGreaterThan = (str) => {
     return new Promise( (resolve, reject) => {
         if(str.length > 10){
