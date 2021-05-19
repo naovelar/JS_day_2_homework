@@ -18,14 +18,11 @@ let person3 = {
     }]
 }
 
-for( let i=0; i<Object.keys(person3).length; i++){
-    if(Array.isArray(Object.values(person3)[i])){
-        let vals = Object.values(person3)[i];
-            for( let i=0; i<Object.values(vals).length; i++){
-                console.log(Object.values(vals)[i])
-            }
-    }else{
-        console.log(Object.values(person3)[i])
+function favorite_foods(){
+    for (let i = 0; i < Object.keys(person3).length; i++) {
+        if (Array.isArray(Object.keys(person3))) {
+            console.log(Object.values(person3)[i])
+        }
     }
 }
 
