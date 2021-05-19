@@ -47,16 +47,16 @@ age by 3 years. Use an arrow function for both methods
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
 
-class Person{
-    constructor(name,age){
+function Person{
+    constructor(name,age) {
         this.name = name;
         this.age = age;
     }
-    printInfo =() => {
+    printInfo = () => {
         return `Name: ${this.name} \n Age: ${this.age}`
     }
-    newAge() { 
-        this.age++
+    newAge = (num) => { 
+        this.age ++ num
         return (this.age)
         }
     }
@@ -64,14 +64,13 @@ class Person{
 
 let person1 = new Person('Naomi', 25)
 let person2 = new Person('Benjamin', 23)
-console.log(p1.printInfo())
-console.log(p2.printInfo())
-console.log(p1.newAge())
-console.log(p1.printInfo())
-console.log(p2.newAge())
-console.log(p1.printInfo())
-console.log(p2.printInfo())
-console.log(p2.newAge())
+
+console.log(person1.printInfo())
+console.log(person2.printInfo())
+
+person1.addAge(3)
+
+console.log(person1.printInfo())
 
 // =============Exercise #3 ============ //
 /*
@@ -81,24 +80,44 @@ console.log(p2.newAge())
     If the length of the string is less than 10 console log "Small Number"
 */
 
-let  isGreaterThan = (str) => {
-    new Promise( (resolve, reject) => {
-        if (str.length > 10) {
-            resolve('big word')
+// 1st attempt
+let isGreaterThan = new Promise((resolve, reject) => {
+  
+  let str.length = 4
+    
+  if (str.length > 10) {
+    resolve('big word')
+  } else {
+    reject('small word')
+  }
+})
+
+isGreaterThan.then(message) => {
+    console.log('This is a... ' + message)
+    })
+.catch( (message) => {
+    console.log('This is a... ' + message)
+})
+
+// 2nd attempt
+
+function isGreaterThanPromise() {
+    return new Promise( (resolve, reject) => {
+        if ((str.length) > 10) {
+          resolve(
+              message: 'big word',
         } else {
-            reject('small word')
+          reject(
+              message: 'small word'
         }
     })
 }
-isGreaterThan('onamonapia')
-.then( (message) => {
+
+isGreaterThanPromise().then( (message) => {
     console.log('This is a... ' + message)
-})
-.catch( (message) =>{
+}).catch( (error.message) => {
     console.log('This is a...' + message)
 })
-isGreaterThan('onamonapia')
-
     
 // =========================================================================================== //
     
