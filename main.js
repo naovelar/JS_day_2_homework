@@ -81,23 +81,23 @@ console.log(p2.newAge())
     If the length of the string is less than 10 console log "Small Number"
 */
 
-const isGreaterThan = (str) => {
-    return new Promise( (resolve, reject) => {
-        if(str.length > 10){
-            resolve(true)
-        }else{
-            reject(false)
+let  isGreaterThan = (str) => {
+    new Promise( (resolve, reject) => {
+        if (str.length > 10) {
+            resolve('big word')
+        } else {
+            reject('small word')
         }
     })
 }
 isGreaterThan('onamonapia')
-.then( (result) => {
-    console.log("Big word")
+.then( (message) => {
+    console.log('This is a... ' + message)
 })
-.catch( (error) =>{
-    console.log("Small Number")
+.catch( (message) =>{
+    console.log('This is a...' + message)
 })
-isLong('onamonapia')
+isGreaterThan('onamonapia')
 
     
 // =========================================================================================== //
