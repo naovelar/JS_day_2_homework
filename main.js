@@ -18,6 +18,16 @@ let person3 = {
     }]
 }
 
+for( let i=0; i<Object.keys(person3).length; i++){
+    if(Array.isArray(Object.values(person3)[i])){
+        let vals = Object.values(person3)[i];
+            for( let i=0; i<Object.values(vals).length; i++){
+                console.log(Object.values(vals)[i])
+            }
+    }else{
+        console.log(Object.values(person3)[i])
+    }
+}
 
 //=======Exercise #2=========//
 /*
@@ -48,6 +58,34 @@ class Person{
 
 let Ben = new Person('Ben', 1, 'Age', true);
 
+===========================================================================================
+
+class Person{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    printInfo =() => {
+        return `Name: ${this.name} \n Age: ${this.age}`
+    }
+    newAge() { 
+        this.age++
+        return (this.age)
+        }
+    }
+
+
+let p1 = new Person('Naomi', 25)
+let p2 = new Person('Benjamin', 23)
+console.log(p1.printInfo())
+console.log(p2.printInfo())
+console.log(p1.newAge())
+console.log(p1.printInfo())
+console.log(p2.newAge())
+console.log(p1.printInfo())
+console.log(p2.printInfo())
+console.log(p2.newAge())
+
 // =============Exercise #3 ============//
 /*
 
@@ -73,3 +111,38 @@ isEvenNumber(10)
 .then( (result) => {
     console.log(`Even Number ${result}`)
 })
+    
+===========================================================================================
+const isGreaterThan = (str) => {
+    return new Promise( (resolve, reject) => {
+        if(str.length > 10){
+            resolve(true)
+        }else{
+            reject(false)
+        }
+    })
+}
+isGreaterThan('onamonapia')
+.then( (result) => {
+    console.log("Big word")
+})
+.catch( (error) =>{
+    console.log("Small Number")
+})
+isLong('onamonapia')
+
+    
+===========================================================================================
+    
+// CODEWARS PROBLEM #1
+// Reverse Words: Complete the solution so that it reverses all of the words within the string passed in.
+    
+/* Python version:
+def reverseWords(str):
+    return " ".join(str.split()[::-1])
+*/
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ');
+}
+    
+// CODEWARS PROBLEM #2
